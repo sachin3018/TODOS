@@ -46,6 +46,15 @@ export default function ADDTODO({ navigation }) {
             );
           }
         }
+        else{
+          ToastAndroid.showWithGravityAndOffset(
+            "Set TODO to achive your Goal",
+            ToastAndroid.LONG,
+            ToastAndroid.BOTTOM,
+            25,
+            50
+          );
+        }
         
       }
 
@@ -81,7 +90,7 @@ export default function ADDTODO({ navigation }) {
               autoCapitalize = "none"
               autoComplete = {false}
               maxLength = {32}
-              onChangeText = {(day) => {sethours(hour)}}
+              onChangeText = {(day) => {setday(day)}}
               value={day}
               clearButtonMode = "always"
               />
